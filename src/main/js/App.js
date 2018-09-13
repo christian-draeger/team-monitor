@@ -22,10 +22,11 @@ class App extends Component {
 
     render() {
         return (
-            <BoardWrapper>
-                {this.state.result.map(jobResult => <Panel jobResult={jobResult}/>)}
-            </BoardWrapper>
-
+            <div style={{height: "98vh"}}>
+                <BoardWrapper>
+                    {this.state.result.map(jobResult => <Panel jobResult={jobResult}/>)}
+                </BoardWrapper>
+            </div>
         );
     }
 }

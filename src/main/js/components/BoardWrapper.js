@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import styled from "styled-components";
 
 const StyledBoardWrapper = styled.div`
-  height: 100vh;
+  height: 100%;
+  padding: 10px;
   display: grid;
   grid-auto-rows: 1fr;
   grid-auto-columns: minmax(33%, 1fr);
