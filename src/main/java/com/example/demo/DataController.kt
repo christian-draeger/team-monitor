@@ -14,13 +14,14 @@ class DataController {
         val result = mutableListOf<JobResult>()
 
         for(i in 1..numberOfPanels) {
-            result.add(JobResult(jobName = "job $i"))
+            result.add(JobResult(jobName = "job $i", id = i))
         }
         return result
     }
 }
 
 data class JobResult(
+        var id: Int,
         var jobName: String = "job name",
         val status: String = "default status",
         val successCount: Int = -1,

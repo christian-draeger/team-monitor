@@ -1,35 +1,41 @@
 [
     {
+        "id": 1,
         "jobName": "job with success",
         "status": "success",
         "successCount": -1,
         "failCount": -1
     },
     {
+        "id": 2,
         "jobName": "job with failure",
         "status": "failure",
         "successCount": -1,
         "failCount": -1
     },
     {
+        "id": 3,
         "jobName": "job with building",
         "status": "building",
         "successCount": -1,
         "failCount": -1
     },
     {
+        "id": 4,
         "jobName": "job with abort",
         "status": "abort",
         "successCount": -1,
         "failCount": -1
     },
     {
+        "id": 5,
         "jobName": "job with error",
         "status": "error",
         "successCount": -1,
         "failCount": -1
     },
     {
+        "id": 6,
         "jobName": "some job name",
         "status": "default",
         "successCount": -1,

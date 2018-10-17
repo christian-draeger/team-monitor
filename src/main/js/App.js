@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Panel from "./components/Panel";
 import BoardWrapper from "./components/BoardWrapper";
+import {getApiEndpoint as api} from "./api";
 
 class App extends Component {
 
@@ -13,7 +14,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        fetch("http://localhost:8182/data")
+        fetch(api())
             .then(response => response.json())
             .then((data) => {
                 this.setState({result: data})
@@ -25,7 +26,7 @@ class App extends Component {
             <div style={{height: "98vh"}}>
                 <BoardWrapper>
                     {this.state.result.map(jobResult =>
-                        <Panel jobResult={jobResult}/>)
+                        <Panel jobResult={jobResult} key={jobResult.id}/>)
                     }
                 </BoardWrapper>
             </div>

@@ -36,7 +36,6 @@ const StyledPanel = styled.div`
 `;
 
 const Panel = ({jobResult}) => {
-    console.log(jobResult.status);
     return (
         <StyledPanel status={jobResult.status}>{jobResult.jobName}</StyledPanel>
     );
