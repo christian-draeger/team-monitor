@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class DataController {
 
-    val numberOfPanels = 10
+    val numberOfPanels = 15
 
     @GetMapping("/data")
     fun renderMainPage(): List<JobResult> {

@@ -277,5 +277,31 @@
             </build>
         </profile>
 
+        <profile>
+            <id>mocked</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>uk.co.deliverymind</groupId>
+                        <artifactId>wiremock-maven-plugin</artifactId>
+                        <version>2.9.0</version>
+                        <executions>
+                            <execution>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <!--<dir>target/test-classes</dir>-->
+                                    <params>
+                                        --port=8182 --https-port=8183 --global-response-templating
+                                    </params>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>

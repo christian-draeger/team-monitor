@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        fetch("/data")
+        fetch("http://localhost:8182/data")
             .then(response => response.json())
             .then((data) => {
                 this.setState({result: data})
@@ -24,7 +24,9 @@ class App extends Component {
         return (
             <div style={{height: "98vh"}}>
                 <BoardWrapper>
-                    {this.state.result.map(jobResult => <Panel jobResult={jobResult}/>)}
+                    {this.state.result.map(jobResult =>
+                        <Panel jobResult={jobResult}/>)
+                    }
                 </BoardWrapper>
             </div>
         );
